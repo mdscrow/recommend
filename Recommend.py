@@ -94,7 +94,7 @@ def main() -> None:
     queries = open("queries.txt", "r").read().split("\n")
     am = precalc_angles(ht)
     print(f'Positive entries: {count_positives(ht)}')
-    print(f'Average angle: {calculate_average(am):.2f}') # :.2f AND rounding in the functions so that 0 or 1 dp get lengthened, but <3 dp get rounded instead of truncated
+    print(f'Average angle: {calculate_average(am):.2f}') # :.2f AND rounding in the functions so that 0 or 1 dp get lengthened, but >3 dp get rounded instead of truncated
     for query in queries:
         if len(query) > 0:
             banned_indecies = list(map(int,query.split()))
